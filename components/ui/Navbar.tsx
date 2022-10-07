@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React, { FC } from 'react';
 import Image from 'next/image';
+import { ActiveLink } from './ActiveLink';
 
 const routes = [
   { routeName: 'Home', href: '/' },
@@ -10,10 +11,9 @@ const routes = [
   { routeName: 'Contact', href: '/contact' },
 ]
 
-
 export const Navbar: FC = () => {
   return (
-    <div className='container bg-black pl-3 pr-3 p-1 shadow-lg border-b-1 border-slate-400'>
+    <div className='container bg-black pl-3 pr-3 p-1 shadow-lg border-b-1 border-slate-400 grid-cols-12'>
       <nav className='flex items-center grid-cols-12'>
         <div className='columns-2 flex items-center'>
           <Image 
@@ -25,9 +25,7 @@ export const Navbar: FC = () => {
         <div className='columns-10 flex items-center'>
           {
             routes.map(({ routeName, href }) => (
-              <Link href={ href } passHref key={ href }>
-                <a className='text-white m-3'>{ routeName }</a>
-              </Link>
+              <ActiveLink href={ href } routeName={ routeName } />
             ))
           }
         </div>
