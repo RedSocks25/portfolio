@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 
-const Home: NextPage = () => {
+const HomePage: NextPage = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold underline">Bienvenidos a mi portafolios</h1>
@@ -8,4 +8,4 @@ const Home: NextPage = () => {
   );
 }
 
-export default Home;
+export default HomePage;
