@@ -1,22 +1,19 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React, { CSSProperties, PropsWithChildren, FC } from 'react'
+import React, { FC } from 'react'
 
-const style: CSSProperties = {
-  color: '#FD545D',
-}
 
 interface Props {
   routeName: string;
   href: string;
 }
 
-export const ActiveLink: FC<PropsWithChildren<Props>> = ({ routeName, href }) => {
+export const ActiveLink: FC<Props> = ({ routeName, href }) => {
   const { asPath } = useRouter();
   
   return (
     <Link href={ href } passHref key={ href }>
-      <a className='text-white m-3' style={ asPath === href ? style : undefined}>{ routeName }</a>
+      <a className={`m-3 ${ asPath === href ? 'text-cerulean-blue' : 'text-white' } font-semibold`}>{ routeName }</a>
     </Link>
   )
 }

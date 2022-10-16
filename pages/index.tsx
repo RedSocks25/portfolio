@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import { PresentationCard } from '../components/ui';
 
+
 const HomePage: NextPage = () => {
   return (
     <>
