@@ -9,10 +9,10 @@ export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
         <title>Nicolas S.M.</title>
         <link rel="icon" href="/img/icon.ico" />
       </Head>
-
+      
       <Navbar />
 
-      <main>
+      <main className='bg-outer-space-crayola'>
         { children }
       </main>
     </div>

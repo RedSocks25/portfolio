@@ -14,7 +14,7 @@ const routes = [
 export const Navbar: FC = () => {
   return (
     <div className='container bg-black pl-3 pr-3 p-1 shadow-lg border-b-1 border-slate-400 grid-cols-12'>
-      <nav className='flex items-center grid-cols-12'>
+      <nav className='flex items-center grid grid-cols-12'>
         <div className='columns-2 flex items-center'>
           <Image 
             src={'/img/portfolio-logo.png'}
@@ -25,7 +25,7 @@ export const Navbar: FC = () => {
         <div className='columns-10 flex items-center'>
           {
             routes.map(({ routeName, href }) => (
-              <ActiveLink href={ href } routeName={ routeName } />
+              <ActiveLink href={ href } routeName={ routeName } key={ href } />
             ))
           }
         </div>
