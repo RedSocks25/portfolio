@@ -4,22 +4,27 @@ import { PresentationCard } from '../components/ui';
 
 
 const HomePage: NextPage = () => {
+
+
+
   return (
     <>
-      <div className='grid grid-cols-2 bg-sizzling-red h-screen p-8'> {/* Presentation <Div> */}
+      <div className='grid grid-cols-2 bg-sizzling-red h-screen p-8 h-screen h-[calc(100vh-90px)'> {/* Presentation <Div> */}
         
         {/* Message and presentation card */}
-        <div className='columns-1 p-5 space-y-10'> 
+        <div className='grid grid-row columns-1 p-5 space-y-10'> 
           
           {/* Entry Message */}
           <div className='flex items-center'>
             <p className='text-5xl text-center text-white'>
-              <span className='text-8xl text-cerulean-blue'>Coding</span> is a power with which we can do <span className='text-8xl text-cerulean-blue'>whatever</span> we want
+              <span className='text-8xl text-cerulean-blue inline-block align-baseline'>Coding </span> gives the power to do <span className='text-8xl inline-block align-b aseline text-cerulean-blue'> Whatever </span> we want
             </p>
           </div>
 
           {/* Presentation Card */}
-          <PresentationCard />
+          <div className='flex justify-center'>
+            <PresentationCard />
+          </div>
           
         </div>
 

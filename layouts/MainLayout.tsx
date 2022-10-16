@@ -13,7 +13,7 @@ export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
         <link rel="icon" href="/img/icon.ico" />
       </Head>
 
-      <nav>
+      <nav className='sticky top-0'>
         <Navbar />
       </nav>
 
