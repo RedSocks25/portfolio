@@ -1,7 +1,9 @@
-import Link from 'next/link';
 import React, { FC } from 'react';
-import Image from 'next/image';
+
 import { ActiveLink } from './ActiveLink';
+
+import Image from 'next/image';
+
 
 const routes = [
   { routeName: 'Home', href: '/' },
@@ -25,7 +27,7 @@ export const Navbar: FC = () => {
         <div className='flex items-center'>
           {
             routes.map(({ routeName, href }) => (
-              <ActiveLink href={ href } routeName={ routeName } />
+              <ActiveLink href={ href } routeName={ routeName } key={ href } />
             ))
           }
         </div>

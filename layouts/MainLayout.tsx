@@ -1,6 +1,9 @@
+import React, { FC, PropsWithChildren } from 'react';
+
 import Head from 'next/head';
-import React, { FC, PropsWithChildren } from 'react'
+
 import { Navbar } from '../components/ui';
+
 
 export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
