@@ -17,7 +17,7 @@ export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
         <Navbar />
       </nav>
 
-      <main className='bg-outer-space-crayola'>
+      <main className='bg-black'>
         { children }
       </main>
     </div>

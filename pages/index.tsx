@@ -13,8 +13,8 @@ const HomePage: NextPage = () => {
           
           {/* Entry Message */}
           <div className='flex items-center'>
-            <p className='text-5xl text-center'>
-              <span className='text-8xl'>Coding</span> is a power with which we can do <span className='text-8xl'>whatever</span> we want
+            <p className='text-5xl text-center text-white'>
+              <span className='text-8xl text-cerulean-blue'>Coding</span> is a power with which we can do <span className='text-8xl text-cerulean-blue'>whatever</span> we want
             </p>
           </div>
 
