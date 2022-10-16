@@ -10,7 +10,7 @@ export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
     <div>
       <Head>
         <title>Nicolas S.M.</title>
-        <link rel="icon" href="/img/icon.ico" />
+        <link rel="icon" href="/img/logo/iconV2.ico" />
       </Head>
 
       <nav className='sticky top-0'>
