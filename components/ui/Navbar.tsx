@@ -13,23 +13,30 @@ const routes = [
 
 export const Navbar: FC = () => {
   return (
-    <div className='container bg-black pl-3 pr-3 p-1 shadow-lg border-b-1 border-slate-400 grid-cols-12'>
-      <nav className='flex items-center grid-cols-12'>
-        <div className='columns-2 flex items-center'>
-          <Image 
-            src={'/img/portfolio-logo.png'}
-            width={ 125 }
-            height={ 50 }
-          />
-        </div>
-        <div className='columns-10 flex items-center'>
+    <div className='flex container bg-black px-3 py-1 shadow-lg space-x-5'>
+      <div className='flex items-center'>
+        <Image 
+          src={'/img/logo/iconV2.png'}
+          width={ 40 }
+          height={ 40 }
+        />
+      </div>
+      <div className='flex container justify-between'>
+        <div className='flex items-center'>
           {
             routes.map(({ routeName, href }) => (
               <ActiveLink href={ href } routeName={ routeName } />
             ))
           }
         </div>
-      </nav>
+        <div className='flex'>
+          <Image
+            src="/img/svg/theme-change.svg"
+            height={ 24 }
+            width={ 24 }
+          />
+        </div>
+      </div>
     </div>
   )
 }
