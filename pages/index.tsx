@@ -1,15 +1,13 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
+
 import { PresentationCard } from '../components/ui';
 
 
 const HomePage: NextPage = () => {
-
-
-
   return (
     <>
-      <div className='grid grid-cols-2 bg-sizzling-red h-screen p-8 h-screen h-[calc(100vh-90px)'> {/* Presentation <Div> */}
+      <div className='grid grid-cols-2 bg-sizzling-redp-8 h-screen'> {/* Presentation <Div> */}
         
         {/* Message and presentation card */}
         <div className='grid grid-row columns-1 p-5 space-y-10'> 
