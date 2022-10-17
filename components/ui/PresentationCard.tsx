@@ -5,12 +5,12 @@ import Image from 'next/image';
 
 export const PresentationCard = () => {
   return (
-    <div className='flex flex-row bg-black rounded-xl px-5 py-5 justify-center items-center drop-shadow-xl bg-cerulean-blue w-fit h-fit'>
+    <div className='flex flex-row bg-black rounded-xl px-5 py-5 justify-center items-center drop-shadow-xl bg-cerulean-blue w-fit h-fit hover:scale-105 duration-300'>
       
       {/* Image */}
       <div className='flex items-center px-3'>
         <Image
-          src='/img/Nico Selman.png'
+          src='/img/PICTURES/Nico Selman.png'
           alt='Profile Picture'
           width={ 150 }
           height={ 150 }
