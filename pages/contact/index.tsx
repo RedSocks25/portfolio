@@ -1,13 +1,24 @@
 import React from 'react';
 
-import { useForm } from 'react-hook-form';
+import { FieldValues, useForm } from 'react-hook-form';
+
+import { emailApi } from '../../api';
+import { EmailResponse, Message } from '../../interfaces';
 
 
 const ContactPage = () => {
-
   const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const onSubmit = (data: any) => {
+  // Send email on submit calling the backend API
+  const onSubmit = async(values: FieldValues) => {
+    const { username, email, text} = values as Message;
+    
+    const { data } = await emailApi.post<EmailResponse>('/sendEmail', {
+      username,
+      email,
+      text,
+    });
+
     console.log(data);
   }
 
@@ -36,7 +47,7 @@ const ContactPage = () => {
               {...register("username")}
               type='text'
               placeholder='Full Name'  
-              className='rounded-xl px-5 py-2 w-full h-fit'
+              className='rounded-xl px-5 py-2 w-full h-fit bg-grey-coal text-white'
             />
           </div>
           
@@ -46,7 +57,7 @@ const ContactPage = () => {
               {...register("email")}
               type='text'
               placeholder='Email'  
-              className='rounded-xl px-5 py-2 w-full blue'
+              className='rounded-xl px-5 py-2 w-full bg-grey-coal text-white'
             />
           </div>
           
@@ -56,7 +67,7 @@ const ContactPage = () => {
               {...register("message")}
               cols={10}
               rows={10}
-              className='rounded-xl px-5 py-2 w-full h-fit border-cerulean-blue'
+              className='rounded-xl px-5 py-2 w-full h-fit border-cerulean-blue bg-grey-coal text-white'
               placeholder='Write a message here to send...'
             />
           </div>
