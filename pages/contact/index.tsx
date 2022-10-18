@@ -64,7 +64,7 @@ const ContactPage = () => {
           <div className='w-full my-4'>
             <label className='text-white pl-2'>Message</label>
             <textarea
-              {...register("message")}
+              {...register("text")}
               cols={10}
               rows={10}
               className='rounded-xl px-5 py-2 w-full h-fit border-cerulean-blue bg-grey-coal text-white'

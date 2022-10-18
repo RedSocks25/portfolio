@@ -35,7 +35,7 @@ const sendEmail = async(req: NextApiRequest, res: NextApiResponse<Data>) => {
     port: 465,
     secure: true,
     auth: {
-      user: process.env.MAIL_USER,
+      user: process.env.EMITER_EMAIL,
       pass: process.env.MAIL_PASSWORD,
     },
   });
@@ -44,7 +44,7 @@ const sendEmail = async(req: NextApiRequest, res: NextApiResponse<Data>) => {
     // Send the user email to my personal email
     const emailResponse = await transporter.sendMail({
       from: email,
-      to: process.env.MAIL_USER,
+      to: process.env.RECEIVER_EMAIL,
       subject: `Mail from ${ username }`,
       text: text,
       html: `<p>You have a new contact form submission</p><br>
@@ -64,5 +64,4 @@ const sendEmail = async(req: NextApiRequest, res: NextApiResponse<Data>) => {
       code: HTTP_CODES.FORBIDDEN
     });
   }
-
 }
