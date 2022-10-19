@@ -23,7 +23,7 @@ const ContactPage = () => {
   }
 
   return (
-    <div className='grid grid-cols-2 bg-sizzling-red h-screen p-8'> {/* Presentation <Div> */}
+    <div className='grid sm:grid-cols-2 sm:h-screen h-fit p-8'> {/* Presentation <Div> */}
         
       {/* Message and presentation card */}
       <div className='grid grid-row columns-1 p-5 space-y-10'> 
