@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 .container {
-  max-width: 100%;
-  min-width: fit-content;
+  max-width: 100% !important;
+  min-width: fit-content !important;
 }
