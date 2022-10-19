@@ -3,8 +3,6 @@ import React, { FC, useState } from 'react';
 import Link from 'next/link';
 
 
-
-
 interface Props {
   project: { title: string, description: string }
 }
@@ -33,7 +31,6 @@ export const ProjectCard: FC<Props> = ({ project }) => {
         </div>
         <span className='text-white text-center absolute bottom-0 bg-black w-full h-fit py-3 opacity-100'>{ project.title }</span>
       </div>
-
 
     </div>
   );

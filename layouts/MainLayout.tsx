@@ -7,7 +7,9 @@ import { Footer, Navbar } from '../components/ui';
 
 export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <div>
+    
+    /* TODO: aplciar Min 'Width property' -> fit-content */
+    <div className='container'>
       <Head>
         <title>Nicolas S.M.</title>
         <link rel="icon" href="/img/logo/iconV2.ico" />

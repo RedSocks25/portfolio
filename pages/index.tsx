@@ -43,19 +43,19 @@ const HomePage: NextPage = () => {
         </div>
 
         {/* Logo Section. Probably will be showing something important in this section, like new projects or something */}
-        <div className='sm:columns-1 flex items-center justify-center m-3'>
+        {<div className='sm:columns-1 sm:flex sm:items-center sm:justify-center sm:m-3 hidden sm:block'>
           <Image
             src='/img/iconv2.png'
             height={ 150 }
             width={ 150 }
           />
-        </div>
+        </div>}
 
       </div>
 
 
       {/* Projects <Div> */}
-      <div className='h-screen bg-white grid grid-cols-1 h-fit sm:h-screen sm:grid-cols-3'>
+      <div className='bg-white grid grid-cols-1 h-fit sm:h-screen sm:grid-cols-3'>
         {
           projects.map((project, index) => (
             // TODO: Create component for ProjectCard
