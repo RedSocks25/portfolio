@@ -23,7 +23,7 @@ const projects = [
 const HomePage: NextPage = () => {
   return (
     <>
-      <div className='grid grid-cols-2 p-8 h-screen'> {/* Presentation <Div> */}
+      <div className='grid sm:grid-cols-2 p-2 sm:p-8 h-fit sm:h-screen'> {/* Presentation <Div> */}
         
         {/* Message and presentation card */}
         <div className='grid grid-row columns-1 p-5 space-y-10'> 
@@ -43,7 +43,7 @@ const HomePage: NextPage = () => {
         </div>
 
         {/* Logo Section. Probably will be showing something important in this section, like new projects or something */}
-        <div className='columns-1 flex items-center justify-center'>
+        <div className='sm:columns-1 flex items-center justify-center m-3'>
           <Image
             src='/img/iconv2.png'
             height={ 150 }
@@ -55,7 +55,7 @@ const HomePage: NextPage = () => {
 
 
       {/* Projects <Div> */}
-      <div className='h-screen bg-white grid grid-cols-3'>
+      <div className='h-screen bg-white grid grid-cols-1 h-fit sm:h-screen sm:grid-cols-3'>
         {
           projects.map((project, index) => (
             // TODO: Create component for ProjectCard

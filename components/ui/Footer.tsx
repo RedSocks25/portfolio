@@ -26,6 +26,7 @@ const links = [
 export const Footer = () => {
   return (
     <div className='flex flex-col items-center container py-5'>
+      
       {/* Links for reaching */}
       <div className='my-5 flex flex-row gap-x-6'>
         {
@@ -43,15 +44,6 @@ export const Footer = () => {
             
           ))
         }
-      </div>
-      
-      <div className='flex items-center justify-center mt-3'>
-        <Image
-        alt='Nico S.M. logo'
-          src='/img/iconv2.png'
-          height={ 70 }
-          width={ 70 }
-        />
       </div>
 
       <div className='mt-3'>
