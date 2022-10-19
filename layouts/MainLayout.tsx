@@ -2,7 +2,7 @@ import React, { FC, PropsWithChildren } from 'react';
 
 import Head from 'next/head';
 
-import { Navbar } from '../components/ui';
+import { Footer, Navbar } from '../components/ui';
 
 
 export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
@@ -20,6 +20,10 @@ export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
       <main className='bg-black'>
         { children }
       </main>
+
+      <footer className='bg-black'>
+        <Footer />
+      </footer>
     </div>
   )
 }

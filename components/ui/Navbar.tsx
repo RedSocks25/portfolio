@@ -18,6 +18,7 @@ export const Navbar: FC = () => {
     <div className='flex container bg-black px-3 py-1 shadow-lg space-x-5'>
       <div className='flex items-center'>
         <Image 
+          alt='Nico S.M. logo'
           src={'/img/logo/iconV2.png'}
           width={ 40 }
           height={ 40 }
@@ -33,6 +34,7 @@ export const Navbar: FC = () => {
         </div>
         <div className='flex'>
           <Image
+            alt='Change theme icon'
             src="/img/svg/theme-change.svg"
             height={ 24 }
             width={ 24 }

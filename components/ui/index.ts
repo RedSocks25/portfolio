@@ -1,3 +1,4 @@
-export * from './Navbar';
 export * from './ActiveLink';
+export * from './Footer';
+export * from './Navbar';
 export * from './PresentationCard';
