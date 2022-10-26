@@ -27,7 +27,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
 const sendEmail = async(req: NextApiRequest, res: NextApiResponse<Data>) => {
   
   // Receive the contact message data to send it to the email
- const { username, email, text } = req.body as Message;
+ const { username, email, content } = req.body as Message;
 
  // Create transporter object that manage the email connection
   const transporter = nodemailer.createTransport({
@@ -46,11 +46,11 @@ const sendEmail = async(req: NextApiRequest, res: NextApiResponse<Data>) => {
       from: email,
       to: process.env.RECEIVER_EMAIL,
       subject: `Mail from ${ username }`,
-      text: text,
+      text: content,
       html: `<p>You have a new contact form submission</p><br>
         <p><strong>Name: </strong>${ username }</p>
         <p><strong>Email: </strong>${ email }</p>
-        <p><strong>Message: </strong>${ text }</p>`,
+        <p><strong>Message: </strong>${ content }</p>`,
     });
 
     return res.status(HTTP_CODES.OK).json({

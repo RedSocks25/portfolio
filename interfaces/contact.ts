@@ -4,7 +4,7 @@ import { HTTP_CODES } from '../utils/contants';
 export interface Message {
   username: string;
   email: string;
-  text: string;
+  content: string;
 }
 
 export interface EmailResponse {

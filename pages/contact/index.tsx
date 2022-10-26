@@ -3,6 +3,8 @@ import React from 'react';
 import { FieldValues, useForm } from 'react-hook-form';
 
 import { emailApi } from '../../api';
+
+import { Button, Input, TextArea } from '../../components/common';
 import { EmailResponse, Message } from '../../interfaces';
 
 
@@ -11,12 +13,12 @@ const ContactPage = () => {
 
   // Send email on submit calling the backend API
   const onSubmit = async(values: FieldValues) => {
-    const { username, email, text} = values as Message;
+    const { username, email, content } = values as Message;
     
     const { data } = await emailApi.post<EmailResponse>('/sendEmail', {
       username,
       email,
-      text,
+      content,
     });
 
     console.log(data);
@@ -41,38 +43,34 @@ const ContactPage = () => {
 
         {/* TODO: Contact form */}
         <form onSubmit={ handleSubmit(onSubmit) } id='contact-form' className='flex grid justify-items-center'>
-          <div className='w-full my-4'>
-            <label className='text-white pl-2'>Full name</label>
-            <input
-              {...register("username")}
-              type='text'
-              placeholder='Full Name'  
-              className='rounded-xl px-5 py-2 w-full h-fit bg-grey-coal text-white'
-            />
-          </div>
+
+          <Input
+            type='text'
+            placeholder='Full name'
+            label='Full name'
+            {...register("username")}
+          />
           
-          <div className='w-full my-4'>
-            <label className='text-white pl-2'>Email</label>
-            <input
-              {...register("email")}
-              type='text'
-              placeholder='Email'  
-              className='rounded-xl px-5 py-2 w-full bg-grey-coal text-white'
-            />
-          </div>
+          <Input
+            type='text'
+            placeholder='Email'
+            label='Email'
+            {...register("email")}
+          />
           
-          <div className='w-full my-4'>
-            <label className='text-white pl-2'>Message</label>
-            <textarea
-              {...register("text")}
-              cols={10}
-              rows={10}
-              className='rounded-xl px-5 py-2 w-full h-fit border-cerulean-blue bg-grey-coal text-white'
-              placeholder='Write a message here to send...'
-            />
-          </div>
+          <TextArea
+            label='Message'
+            placeholder='Write your message...'
+            cols={10}
+            rows={5}
+            {...register("content")}
+          />
         
-          <button type='submit' className="px-5 py-1 text-lg h-fit w-fit text-cerulean-blue font-semibold rounded-full border hover:text-white hover:bg-cerulean-blue hover:border-black mt-2 duration-300 focus:outline-none focus:ring focus:ring-white">Send Message</button>
+          <Button
+            type='submit'
+          >
+            Send Message
+          </Button>
         </form>
 
 
