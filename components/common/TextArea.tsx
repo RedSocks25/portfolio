@@ -16,7 +16,7 @@ export const TextArea: FC<Props> = ({ placeholder, cols, rows, label }) => {
         cols={ cols ? cols : 5}
         rows={ rows ? rows : 5}
         placeholder={ placeholder ? `${ placeholder }` : 'Type something' }
-        className='rounded-xl mt-1 px-4 py-2 w-full bg-grey-coal text-white outline-none focus:outline-cerulean-blue'
+        className='rounded-xl mt-1 px-4 py-2 w-full bg-grey-coal text-white outline-none focus:outline-cerulean-blue duration-200'
       />
     </div>
   );

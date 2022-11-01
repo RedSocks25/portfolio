@@ -14,7 +14,7 @@ export const Input: FC<Props> = ({ placeholder, label, type }) => {
       <input
         type={ type }
         placeholder={ placeholder ? `${ placeholder }` : '' }  
-        className='rounded-xl mt-1 px-4 py-2 w-full bg-grey-coal text-white outline-none focus:outline-cerulean-blue'
+        className='rounded-xl mt-1 px-4 py-2 w-full bg-grey-coal text-white outline-none focus:outline-cerulean-blue duration-200'
       />
     </div>
   );
