@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import React, { FC, useState } from 'react';
 import Link from 'next/link';
+import { Project } from '../../interfaces';
 
 
 interface Props {
-  project: { title: string, description: string }
+  project: Project;
 }
 
 export const ProjectCard: FC<Props> = ({ project }) => {
@@ -18,6 +19,7 @@ export const ProjectCard: FC<Props> = ({ project }) => {
       onMouseOut={ () => setIsHovered(false) }
     >
       <Image
+        alt='project default image'
         src='/img/pictures/default-project.jpg'
         layout='fill'
       />
@@ -25,7 +27,7 @@ export const ProjectCard: FC<Props> = ({ project }) => {
       <div className='h-screen flex'>
         <div className={`${ isHovered ? 'h-full' : 'h-0' } w-full absolute duration-300 bottom-0 flex flex-col bg-black opacity-50 items-center justify-center px-3`}>
           <p className={`${ !isHovered && 'scale-0' } duration-300 text-white my-5 flex`}>{ project.description }</p>
-          <Link href='/projects/project' passHref>
+          <Link href={`/projects/${ project.id }`} passHref>
             <a className={`${ !isHovered && 'scale-0' } duration-300 text-white text-center my-5`}>View more</a>
           </Link>
         </div>

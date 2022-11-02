@@ -4,23 +4,13 @@ import Image from 'next/image';
 import { ProjectCard } from '../components/projects';
 import { PresentationCard } from '../components/ui';
 
+import { projects } from '../data/projects';
 
-const projects = [
-  {
-    title: "Project 1",
-    description: "Description of project 1 for being shown in the projects HomePage section"
-  },
-  {
-    title: "Project 2",
-    description: "Description of project 2 for being shown in the projects HomePage section"
-  },
-  {
-    title: "Project 3",
-    description: "Description of project 3 for being shown in the projects HomePage section"
-  },
-]
 
 const HomePage: NextPage = () => {
+
+  
+
   return (
     <>
       <div className='grid sm:grid-cols-2 p-2 sm:p-8 h-fit sm:h-screen'> {/* Presentation <Div> */}
@@ -45,6 +35,7 @@ const HomePage: NextPage = () => {
         {/* Logo Section. Probably will be showing something important in this section, like new projects or something */}
         {<div className='sm:columns-1 sm:flex sm:items-center sm:justify-center sm:m-3 hidden sm:block'>
           <Image
+            alt='icon image'
             src='/img/iconv2.png'
             height={ 150 }
             width={ 150 }
@@ -58,7 +49,6 @@ const HomePage: NextPage = () => {
       <div className='bg-white grid grid-cols-1 h-fit sm:h-screen sm:grid-cols-3'>
         {
           projects.map((project, index) => (
-            // TODO: Create component for ProjectCard
             <ProjectCard project={ project } key={ index } />
           ))
         }
